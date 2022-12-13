@@ -6,43 +6,23 @@
 /*   By: almighty <almighty@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/05 15:52:44 by blahloum          #+#    #+#             */
-/*   Updated: 2022/12/12 15:18:58 by almighty         ###   ########.fr       */
+/*   Updated: 2022/12/14 00:30:07 by almighty         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
 static size_t	ft_str_len(char const *s, char c);
+static char		**ft_pop_mat(char const *s, char c, char **mat);
 
 char	**ft_split(char const *s, char c)
 {
 	char	**mat;
-	unsigned int	i;
-	size_t	nc;
 	size_t	ns;
 
-	nc = ft_str_len(s, c);
-	mat = (char **)malloc(sizeof(char *) * (nc + 1));
-	i = 0;
-	nc = 0;
-	ns = 0;
-	while (s[i] || mat[ns])
-	{
-		if (s[i] != c)
-		{
-			while (s[i] != c && s[i])
-				nc++;
-			mat[ns] = ft_substr(s, i, nc);
-			printf("%s \n", mat[ns]);
-			i += nc;
-			nc = 0;
-			ns++;
-		}
-		else
-			i++;
-	}
-
+	ns = ft_str_len(s, c);
+	mat = (char **)ft_calloc(ns + 1, sizeof(char *));
+	mat = ft_pop_mat(s, c, mat);
 	return (mat);
 }
 
@@ -67,8 +47,29 @@ static size_t	ft_str_len(char const *s, char c)
 	return (e);
 }
 
-int	main(void)
+static char	**ft_pop_mat(char const *s, char c, char **mat)
 {
-	ft_split("asdjpomsdja posadjposajdpoa sdj poasjdpa jso ", ' ');
-	return (0);
+	int		i;
+	size_t	nc;
+	size_t	ns;
+
+	i = 0;
+	nc = 0;
+	ns = 0;
+	while (s[i])
+	{
+		if (s[i] != c && ns < ft_str_len(s, c))
+		{
+			while (s[i + nc] != c && s[i + nc])
+				nc++;
+			mat[ns] = ft_substr(s, i, nc);
+			mat[ns][nc] = '\0';
+			i += nc;
+			nc = 0;
+			ns++;
+		}
+		else
+			i++;
+	}
+	return (mat);
 }
