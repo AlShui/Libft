@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: blahloum <blahloum@student.42.fr>          +#+  +:+       +#+        */
+/*   By: almighty <almighty@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/07 12:55:22 by blahloum          #+#    #+#             */
-/*   Updated: 2022/12/07 13:27:29 by blahloum         ###   ########.fr       */
+/*   Updated: 2022/12/12 13:08:16 by almighty         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,5 @@ char	*ft_itoa(int n)
 	int		i;
 
 	i = 0;
-	malloc((n + 1) * sizeof(char *));
-	if (ft_atoi(strnum))
-		return (strnum);
-	return (NULL);
+	
 }

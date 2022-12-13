@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: blahloum <blahloum@student.42.fr>          +#+  +:+       +#+         #
+#    By: almighty <almighty@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/24 14:10:59 by blahloum          #+#    #+#              #
-#    Updated: 2022/12/07 13:05:28 by blahloum         ###   ########.fr        #
+#    Updated: 2022/12/12 15:17:27 by almighty         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -38,13 +38,12 @@ SRC := ft_isalpha.c \
 	ft_strnstr.c \
 	ft_atoi.c \
 	ft_calloc.c \
+	ft_substr.c \
 	ft_strdup.c \
 	ft_strjoin.c \
 	ft_strtrim.c \
-	#ft_split.c \
-	#ft_itoa.c \
-	#ft_strmapi.c \
-	#ft_striteri.c \
+	ft_split.c 
+		
 	
 	
 
