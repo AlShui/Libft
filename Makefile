@@ -6,7 +6,7 @@
 #    By: almighty <almighty@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/24 14:10:59 by blahloum          #+#    #+#              #
-#    Updated: 2022/12/12 15:17:27 by almighty         ###   ########.fr        #
+#    Updated: 2022/12/15 16:54:39 by almighty         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -42,8 +42,13 @@ SRC := ft_isalpha.c \
 	ft_strdup.c \
 	ft_strjoin.c \
 	ft_strtrim.c \
-	ft_split.c 
-		
+	ft_split.c \
+	ft_itoa.c \
+	ft_strmapi.c \
+	ft_putchar_fd.c \
+	ft_putstr_fd.c \
+	ft_putendl_fd.c \
+	ft_putnbr_fd.c 		
 	
 	
 

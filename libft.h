@@ -6,7 +6,7 @@
 /*   By: almighty <almighty@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/24 14:04:05 by blahloum          #+#    #+#             */
-/*   Updated: 2022/12/12 15:01:26 by almighty         ###   ########.fr       */
+/*   Updated: 2022/12/15 16:54:18 by almighty         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 # define LIBFT_H
 # include <stdlib.h>
 # include <stddef.h>
+# include <unistd.h>
 
 int		ft_isalpha(int c);
 int		ft_isdigit(int c);
@@ -36,6 +37,11 @@ void	*ft_memcpy(void *dest, const void *src, size_t n);
 void	*ft_memmove(void *dest, const void *src, size_t n);
 void	*ft_memchr(const void *s, int c, size_t n);
 void	*ft_calloc(size_t nmemb, size_t size);
+void	ft_striteri(char *s, void (*f)(unsigned int, char*));
+void	ft_putchar_fd(char c, int fd);
+void	ft_putstr_fd(char *s, int fd);
+void	ft_putendl_fd(char *s, int fd);
+void	ft_putnbr_fd(int n, int fd);
 
 char	*ft_strchr(const char *s, int c);
 char	*ft_strrchr(const char *s, int c);
@@ -46,5 +52,7 @@ char	*ft_strjoin(char const *s1, char const *s2);
 char	*ft_strtrim(char const *s1, char const *set);
 
 char	**ft_split(char const *s, char c);
+char	*ft_itoa(int n);
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 
 #endif
